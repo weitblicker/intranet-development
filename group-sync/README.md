@@ -13,3 +13,13 @@ Weitere Infos zum Setup hier: https://weitblicker.sharepoint.com/WeitblickWiki/I
 ## Manueller Sync
 
 Zusätzlich sind Skripte verfügbar, mit denen die Office-365 und Sicherheitsgruppen manuell synchronisiert werden können (default: Alle, mitglieder und vorstand !). Diese wurden während der Umstellung zu Office-365 Gruppen verwendet.
+
+## Wenn Mitglieder nicht richtig Synchronisiert werden
+Falls das Skript aufgrund von Namensproblemen User nicht richtig Synchronisiert, können diese manuell synchronisiert werden:
+`Add-DistributionGroupMember -Identity $targetSecurityMemberGroup -Member $memberMail -BypassSecurityGroupManagerCheck`
+
+`$targetSecurityMemberGroup` muss dabei die mitglieder.stadt@weitblicker.org adresse sein.
+
+`$memberMail` muss die Emailadresse vorname.nachname@weitblicker.org sein.
+
+Eine aktive Session und hinreichende Rechte werden hierfür benötigt.
