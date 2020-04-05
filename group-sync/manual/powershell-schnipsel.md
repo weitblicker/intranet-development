@@ -151,3 +151,8 @@ Set: https://docs.microsoft.com/en-us/powershell/module/exchange/users-and-group
 
 ## To Title Case
 Get-Culture).TextInfo.ToTitleCase($city)
+
+
+## show all properties of object
+
+Format-List -Property *
